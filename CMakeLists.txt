@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+project(cg-work)
+add_definitions("-std=c++11 -lgmp")
+SET(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cg/CMake/Modules)
+find_package(GMP REQUIRED)
+include_directories("cg/include/cg" ${GMP_INCLUDE_DIR})
+add_subdirectory(cg)
+add_subdirectory(intersections)
